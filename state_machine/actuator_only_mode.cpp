@@ -282,50 +282,15 @@ void actuatorVelocityMode(int newMode, int displayOn, int mode)
     lastUserInteractionTimeUS = time_us_32();
     userDelay = getDelay(userRPM, &stop, mode);
     targetTime = time_us_32() + userDelay;
-    // switch (mode)
-    // {
-    //   case ACTUATOR_VELOCITY_MODE:
-    //     setRing(positiveMod(oldRPM, actuatorVelocityConfig.countsPerRev), MY_CORE, BLACK);
-    //     break;
-    //   case INTERCEPT_VELOCITY_MODE:
-    //     setRing(positiveMod(oldRPM, interceptVelocityConfig.countsPerRev), MY_CORE, BLACK);
-    //     break;
-    //   default:
-    //     Serial.println("ERROR: unexpected mode!");
-    //     break;
-    // }
+
     setRing(positiveMod(oldRPM, NUM_RING), MY_CORE, BLACK);
     if(userRPM < 0)
     {
-      // switch (mode)
-      // {
-      //   case ACTUATOR_VELOCITY_MODE:
-      //     setRing(positiveMod(userRPM, actuatorVelocityConfig.countsPerRev), MY_CORE, REVERSE_COLOR);
-      //     break;
-      //   case INTERCEPT_VELOCITY_MODE:
-      //     setRing(positiveMod(userRPM, interceptVelocityConfig.countsPerRev), MY_CORE, REVERSE_COLOR);
-      //     break;
-      //   default:
-      //     Serial.println("ERROR: unexpected mode!");
-      //     break;
-      // }
       setRing(positiveMod(userRPM, NUM_RING), MY_CORE, REVERSE_COLOR);
       direction = -1;
     }
     else
     {
-      // switch (mode)
-      // {
-      //   case ACTUATOR_VELOCITY_MODE:
-      //     setRing(positiveMod(userRPM, actuatorVelocityConfig.countsPerRev), MY_CORE, FORWARD_COLOR);
-      //     break;
-      //   case INTERCEPT_VELOCITY_MODE:
-      //     setRing(positiveMod(userRPM, interceptVelocityConfig.countsPerRev), MY_CORE, FORWARD_COLOR);
-      //     break;
-      //   default:
-      //     Serial.println("ERROR: unexpected mode!");
-      //     break;
-      // }
       setRing(positiveMod(userRPM, NUM_RING), MY_CORE, FORWARD_COLOR);
       direction = 1;
     }
