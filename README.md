@@ -13,6 +13,11 @@ This repository contains the firmware for a BLDC Simulator. The simulator serves
   - **Velocity**: Essentially runs **Motor Only** and **Actuator Only: Velocity** simultaneously. Useful for testing/observing interaction between motor and actuator when the actuator receives incorrect signals.
 ### Notes
 - Tasks coordinated across both of the RP2040's cores to maximize sustainable motor RPM
+  - core0: read signals from motor
+  - core1: monitor user input, update OLED display update Neopixels, send signals to actuator
+  - control flags set by user input are communicated between cores via RP2040 8 element FIFO queue
+  - display values are passed to core1 via custom print buffers
+
 - Files saved as type .cpp for compatibility with Arduino IDE. Actual language is majority C
 ## External Resources
 - [pixelformer](https://www.qualibyte.com/pixelformer/): used to create OLED screen [pixel maps](/screen_pngs)
