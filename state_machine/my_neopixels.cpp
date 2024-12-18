@@ -4,8 +4,6 @@
 #include "shared_data.h"
 #include "positive_mod.h"
 #include <queue>
-// #include <stdlib.h>
-// #include "blinker.h"
 
 #define NPIX_PIN      15
 #define NUM_PIXELS    32
