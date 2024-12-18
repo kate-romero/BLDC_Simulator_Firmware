@@ -56,24 +56,3 @@ int debounceDetectButton(int buttonIdx)
   }
   return buttonPressed;
 }
-
-// seems to perform slightly worse on quick double taps
-// int debounceDetectButton(int buttonIdx)
-// {
-//   int buttonPressed = 0;
-//   int now;
-//   if((now = millis()) >= buttonPollTimes[buttonIdx])
-//   {
-//     buttonPollTimes[buttonIdx] = now + DEBOUNCE_DELAY;
-//     int state = digitalRead(buttons[buttonIdx]);
-//     if(state != buttonStates[buttonIdx])
-//     {
-//       buttonStates[buttonIdx] = state;
-//       if(!state)
-//       {
-//         buttonPressed = 1;
-//       }
-//     }
-//   }
-//   return buttonPressed;
-// }
