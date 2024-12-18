@@ -2,7 +2,14 @@
 ## Description
 This repository contains the firmware for a BLDC Simulator. The simulator serves as a motor controller and diagnostic tool for rotary actuators. This code was written by intern Kate Romero for [2G Engineering](https://www.2g-eng.com/).
 ### Modes of Operation
-TODO
+- **Actuator Only**
+  - **Position**: Manually spin controller wheel to send simulated motor positions to actuator via Hall states. Can force illegal Hall states.
+  - **Velocity**: Manually spin controller wheel to select a direction and rpm. Controller will send simulated Hall signals to the actuator at the appropriate rate to simulate motor rotation.
+- **Motor Only**: Receive Hall signals from the motor. Observe position, velocity, Hall state progression, and invalid Hall state count. Can clear invalid Hall state count.
+- **Passthrough**: Receive Hall signals from the motor and pass them to the actuator. Observe position, velocity, Hall state progression, and invalid Hall state count. Can clear invalid Hall state count. Useful for determining if the correct signals are being sent/received between motor and actuator. If correct signals are being sent/received, useful for testing/observing interaction between motor and actuator.
+- **Intercept**
+  - **Position**: Essentially runs **Motor Only** and **Actuator Only: Position** simultaneously. Useful for testing/observing interaction between motor and actuator when the actuator receives incorrect signals.
+  - **Velocity**: Essentially runs **Motor Only** and **Actuator Only: Velocity** simultaneously. Useful for testing/observing interaction between motor and actuator when the actuator receives incorrect signals.
 ### Notes
 Files saved as type .cpp for compatibility with Arduino IDE. Actual language is majority C.
 ## External Resources
@@ -19,4 +26,4 @@ Files saved as type .cpp for compatibility with Arduino IDE. Actual language is 
 - [U8g2_Arduino](https://github.com/olikraus/U8g2_Arduino)
 - [U8g2_for_Adafruit_GFX](https://github.com/olikraus/U8g2_for_Adafruit_GFX)
 ---
-All files and materials not listen in External Resources are property of 2G Engineering. Posted publicly with permission.
+All files and materials not listed in External Resources are property of 2G Engineering. Posted publicly with permission.
