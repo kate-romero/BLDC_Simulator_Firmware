@@ -3,6 +3,8 @@
 This repository contains the firmware for a BLDC Simulator. The simulator serves as a motor controller and diagnostic tool for rotary actuators. This code was written by intern Kate Romero for [2G Engineering](https://www.2g-eng.com/).
 ### Modes of Operation
 TODO
+### Notes
+Files saved as type .cpp for compatibility with Arduino IDE. Actual language is majority C.
 ## External Resources
 - [pixelformer](https://www.qualibyte.com/pixelformer/): used to create OLED screen [pixel maps](/screen_pngs)
 - [image2cpp](https://javl.github.io/image2cpp/): used to convert pixel maps into [bitmaps](/screen_pxs)
