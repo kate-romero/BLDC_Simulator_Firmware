@@ -3,11 +3,11 @@
 #include "my_print.h"
 
 #define LEFT_BTN_PIN		12
-#define UP_BTN_PIN			14
-#define CENTER_BTN_PIN	18
+#define UP_BTN_PIN		14
+#define CENTER_BTN_PIN	        18
 #define RIGHT_BTN_PIN		24
 #define DOWN_BTN_PIN		25
-#define DEBOUNCE_DELAY	50
+#define DEBOUNCE_DELAY	        50
 
 int buttons[] = {0, 12, 14, 18, 24, 25};
 int buttonsLength = (int)(sizeof(buttons) / sizeof(*buttons));
