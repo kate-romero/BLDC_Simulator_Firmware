@@ -1,4 +1,3 @@
-// TODO: make intercept bitmaps
 
 #include "shared_data.h"
 #include "blinker.h"
@@ -39,7 +38,7 @@
 #define STOP_MODE                 15
 #define CONFIRM_CLEAR             16
 #define CONFIRM_STOP              17
-#define SHUTDOWN_SIGNAL                  18
+#define SHUTDOWN_SIGNAL           18
 // // RP2040 Pins
 // #define PWR_BTN_SENSE     8
 // #define USB_VBUS_DETECT   10
@@ -52,7 +51,7 @@
 // #define FAKE_MOTOR_TEMP_1K               4
 // #define VBAT_SENSE_ENABLE                5
 // #define HEARTBEAT                        6
-// #define CHARGE_SENSE                     8  // complement?
+// #define CHARGE_SENSE                     8
 // #define ENABLE_TEMP_BIAS                 9
 
 static uint32_t npxUpdateTime1 = 0;
@@ -91,7 +90,7 @@ void setupMCP()
   Serial.println(b ? "true" : "false");
   delay(100);
 
-  MCP.pinMode8(0, 0x00);  //  TODO: 0 = output , 1 = input
+  MCP.pinMode8(0, 0x00);
   MCP.pinMode8(1, 0x00);
 }
 
