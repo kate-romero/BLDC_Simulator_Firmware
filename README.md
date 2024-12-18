@@ -1,6 +1,7 @@
 # BLDC Simulator
 ## Description
 This repository contains the firmware for a BLDC Simulator. The simulator serves as a motor controller and diagnostic tool for rotary actuators. This code was written by intern Kate Romero for [2G Engineering](https://www.2g-eng.com/).
+### Watch demo at: [https://youtu.be/7H5ZqkXBpd8](https://youtu.be/7H5ZqkXBpd8)
 ### Modes of Operation
 - **Actuator Only**
   - **Position**: Manually spin controller wheel to send simulated motor positions to actuator via Hall states. Can force illegal Hall states.
